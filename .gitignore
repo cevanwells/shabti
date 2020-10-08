@@ -1,0 +1,6 @@
+dist/
+.DS_Store
+.python-version
+*.egg-info
+__pycache__
+.env
