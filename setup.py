@@ -33,6 +33,7 @@ setuptools.setup(
         'dev': [
             'pytest>=6.1.1',
             'pytest-dotenv>=0.5.2',
+            'pytest-vcr>=1.0.2',
             'vcrpy>=4.1.0'
         ]
     },
