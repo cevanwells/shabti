@@ -8,7 +8,7 @@ from .version import __version__
 
 class Session(object):
     """shabti Connection class"""
-    def __init__(self, client_id, client_secret, endpoint, version="v5", **kwargs):
+    def __init__(self, client_id, client_secret, endpoint, version="v5"):
         self._endpoint = '{}/iii/sierra-api/{}'.format(endpoint, version)
         auth = HTTPBasicAuth(client_id, client_secret)
         client = BackendApplicationClient(client_id=client_id)
