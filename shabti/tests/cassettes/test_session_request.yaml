@@ -1,0 +1,87 @@
+interactions:
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      User-Agent:
+      - shabti/0.1.0
+      authorization:
+      - DUMMY
+    method: POST
+    uri: https://library.thegdl.org/iii/sierra-api/v5/token
+  response:
+    body:
+      string: '{"access_token":"zVb4wX0meg3X52Efc1B0mZpcGNYhtow5t8XKVjRRuA51WjcJk-I4CX-7kZCK5eCeZ2g5Nk26bsPkeOWKKRI76GLsYrCZLiI0s7LJm3XZapYnN_fedkuN-RqxFTREEqefe-rx_vhA8jgyDfHXIGFiS8Gc7NGEr7rc_QMbovwICJplx_LGLu08nJ0rbZkdQwATNR-J3R5M_cOw1uBbOwj8jA","token_type":"bearer","expires_in":3600}'
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Thu, 29 Oct 2020 19:48:12 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Server:
+      - Apache
+      Set-Cookie:
+      - jcontainerId=.jcontainer-public2; path=/iii/sierra-api
+      - jcontainerId=.jcontainer-public2; path=/sierra/admin
+      - jcontainerId=.jcontainer-public2; path=/sierra/dashboard
+      - jcontainerId=.jcontainer-public2; path=/iii/ws/extlink
+      - jcontainerId=.jcontainer-public2; path=/sierra/shindig
+      - jcontainerId=.jcontainer-public2; path=/sierra/ws/summit
+      Vary:
+      - Accept-Encoding,User-Agent
+      content-length:
+      - '273'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - jcontainerId=.jcontainer-public2
+      User-Agent:
+      - shabti/0.1.0
+      authorization:
+      - DUMMY
+    method: GET
+    uri: https://library.thegdl.org/iii/sierra-api/v5/patrons/1401561
+  response:
+    body:
+      string: '{"id":1401561,"expirationDate":"2023-10-09","birthDate":"1963-07-02","patronType":0,"patronCodes":{"pcode1":"o","pcode2":"-","pcode3":45,"pcode4":0},"homeLibraryCode":"mo","message":{"code":"-"},"blockInfo":{"code":"-"},"moneyOwed":0.0}'
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Thu, 29 Oct 2020 19:48:12 GMT
+      Keep-Alive:
+      - timeout=5, max=99
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding,User-Agent
+      content-length:
+      - '236'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -6,7 +6,7 @@ CLIENT_SECRET = os.environ.get('SHABTI_CLIENT_SECRET', None)
 ENDPOINT = os.environ.get('SHABTI_SIERRA_URL', None)
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="session")
 def vcr_config():
     return {
         "filter_headers": [('authorization', 'DUMMY')],
@@ -16,7 +16,7 @@ def vcr_config():
     }
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="session")
 def shabti_config():
     return {
         'client_id': CLIENT_ID,

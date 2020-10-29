@@ -19,3 +19,12 @@ class Session(object):
     @property
     def token(self):
         return self._token
+
+    def _request(self, method, path, **kwargs):
+        url = '{}/{}'.format(self._endpoint, path)
+        params = {}
+        if "params" in kwargs:
+            params = kwargs['params']
+
+        resp = self._session.request(method, url, params=params)
+        return resp.json()
