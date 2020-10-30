@@ -1,5 +1,6 @@
 import pytest
 import os
+from shabti import Session
 
 CLIENT_ID = os.environ.get('SHABTI_CLIENT_ID', None)
 CLIENT_SECRET = os.environ.get('SHABTI_CLIENT_SECRET', None)
@@ -23,6 +24,11 @@ def shabti_config():
         'client_secret': CLIENT_SECRET,
         'endpoint': ENDPOINT
     }
+
+
+@pytest.fixture(scope="session")
+def api_session():
+    return Session(CLIENT_ID, CLIENT_SECRET, ENDPOINT)
 
 
 @pytest.fixture(scope="session")
