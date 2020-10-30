@@ -2,6 +2,42 @@
 import json
 
 
+# FEATURE: we need to add support for multiple querys within a string
+# {
+#   "queries": [
+#     {
+#       "target": {
+#         "record": {
+#           "type": "patron"
+#         },
+#         "id": 80201
+#       },
+#       "expr": {
+#         "op": "equals",
+#         "operands": [
+#           "810-555-4247",
+#           ""
+#         ]
+#       }
+#     },
+#     "or",
+#     {
+#       "target": {
+#         "record": {
+#           "type": "patron"
+#         },
+#         "id": 80202
+#       },
+#       "expr": {
+#         "op": "equals",
+#         "operands": [
+#           "810-555-4247",
+#           ""
+#         ]
+#       }
+#     }
+#   ]
+# }
 class QueryString(object):
     query_types = ['bib', 'order', 'item', 'volume',
                    'holding', 'patron', 'resource',
