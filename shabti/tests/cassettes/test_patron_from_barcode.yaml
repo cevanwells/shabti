@@ -1,52 +1,5 @@
 interactions:
 - request:
-    body: grant_type=client_credentials
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '29'
-      Content-Type:
-      - application/x-www-form-urlencoded;charset=UTF-8
-      User-Agent:
-      - shabti/0.1.1
-      authorization:
-      - DUMMY
-    method: POST
-    uri: https://library.thegdl.org/iii/sierra-api/v5/token
-  response:
-    body:
-      string: '{"access_token":"UqXDO2OiSMDiDpT-OXV3ZbeKJtkWpdxAQKDZ61BykNppTQEoMpAG-oUtH0riHSP5peFjMR-mlCTkRDYGPIW1OY4RyYWBl1xeVWRQdQcRXtEpru_m28iyubYIK868mbbKZkCc4QwVggJf5BpDVNREFxVZuYPeNa3zax2t6127dF18PoAaLnaTVUE5MN2E3Ow_ybB2F0CI-zHh_1PSfyCxFQ","token_type":"bearer","expires_in":3600}'
-    headers:
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Fri, 30 Oct 2020 13:20:31 GMT
-      Keep-Alive:
-      - timeout=5, max=100
-      Server:
-      - Apache
-      Set-Cookie:
-      - jcontainerId=.jcontainer-public2; path=/iii/sierra-api
-      - jcontainerId=.jcontainer-public2; path=/sierra/admin
-      - jcontainerId=.jcontainer-public2; path=/sierra/dashboard
-      - jcontainerId=.jcontainer-public2; path=/iii/ws/extlink
-      - jcontainerId=.jcontainer-public2; path=/sierra/shindig
-      - jcontainerId=.jcontainer-public2; path=/sierra/ws/summit
-      Vary:
-      - Accept-Encoding,User-Agent
-      content-length:
-      - '273'
-    status:
-      code: 200
-      message: OK
-- request:
     body: '{"expr": {"op": "equals", "operands": ["D2491026132", ""]}, "target": {"record":
       {"type": "patron"}, "field": {"tag": "b"}}}'
     headers:
@@ -61,7 +14,7 @@ interactions:
       Content-type:
       - application/json
       Cookie:
-      - jcontainerId=.jcontainer-public2
+      - jcontainerId=.jcontainer-public1
       User-Agent:
       - shabti/0.1.1
       authorization:
@@ -77,9 +30,9 @@ interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Fri, 30 Oct 2020 13:20:31 GMT
+      - Fri, 30 Oct 2020 14:32:26 GMT
       Keep-Alive:
-      - timeout=5, max=99
+      - timeout=5, max=100
       Server:
       - Apache
       Vary:
