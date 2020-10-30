@@ -30,6 +30,12 @@ def test_patron_from_barcode(api_session):
 def test_patron_from_email(api_session):
     res = Patron.from_email(api_session, 'hmccoy@xavierinstitute.edu')
 @pytest.mark.vcr()
+@pytest.mark.skip(reason="this test requires a refactoring of QueryString")
+def test_patron_from_phone(api_session):
+    patron = Patron.from_phone(api_session, '810-555-4247')
+
+    assert patron.id == '1401561'
+@pytest.mark.vcr()
 def test_patron_from_address(api_session):
     patron = Patron.from_address(api_session, '101 dundee lane')
 
