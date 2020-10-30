@@ -25,6 +25,14 @@ class Patron(ResourceMixin):
                            params=cls._params, headers=cls._headers)
 
         return cls(api, res['entries'][0]['link'])
+    @classmethod
+    def from_address(cls, api, address):
+        path = cls._create_path('query')
+        qry = QueryString("patron", "a", "starts_with", address)
+        res = api._request("POST", path, data=qry.to_json(),
+                           params=cls._params, headers=cls._headers)
+
+        return cls(api, res['entries'][0]['link'])
     def info(self, **kwargs):
         path = self._create_path(self._id)
         if 'fields' in kwargs:
