@@ -28,4 +28,6 @@ def test_patron_from_barcode(api_session):
 
 @pytest.mark.vcr()
 def test_patron_from_email(api_session):
-    pass
+    res = Patron.from_email(api_session, 'hmccoy@xavierinstitute.edu')
+
+    assert res.id == '1401561'
