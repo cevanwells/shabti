@@ -25,3 +25,12 @@ class Patron(ResourceMixin):
                            params=cls._params, headers=cls._headers)
 
         return cls(api, res['entries'][0]['link'])
+    def info(self, **kwargs):
+        path = self._create_path(self._id)
+        if 'fields' in kwargs:
+            params = {'fields': kwargs['fields']}
+        else:
+            params = ''
+        res = self._session._request("GET", path, params=params)
+
+        return res
