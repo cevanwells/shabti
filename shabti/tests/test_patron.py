@@ -21,27 +21,33 @@ def test_patron_from_id(api_session):
 
 @pytest.mark.vcr()
 def test_patron_from_barcode(api_session):
-    res = Patron.from_barcode(api_session, 'D2491026132')
+    patron = Patron.from_barcode(api_session, 'D2491026132')
 
-    assert res.id == '1401561'
+    assert patron.id == '1401561'
 
 
 @pytest.mark.vcr()
 def test_patron_from_email(api_session):
-    res = Patron.from_email(api_session, 'hmccoy@xavierinstitute.edu')
+    patron = Patron.from_email(api_session, 'hmccoy@xavierinstitute.edu')
+
+    assert patron.id == '1401561'
+
+
 @pytest.mark.vcr()
 @pytest.mark.skip(reason="this test requires a refactoring of QueryString")
 def test_patron_from_phone(api_session):
     patron = Patron.from_phone(api_session, '810-555-4247')
 
     assert patron.id == '1401561'
+
+
 @pytest.mark.vcr()
 def test_patron_from_address(api_session):
     patron = Patron.from_address(api_session, '101 dundee lane')
 
     assert patron.id == '1401561'
 
-    assert res.id == '1401561'
+
 @pytest.mark.vcr()
 def test_python_info(api_session, patron_keys):
     patron = Patron(api_session, '1401561')
