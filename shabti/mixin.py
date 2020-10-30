@@ -18,7 +18,7 @@ class ResourceMixin(object):
     @classmethod
     def _create_path(cls, *args):
         built_path = '/'
-        return built_path.join(args)
+        return built_path.join([cls._endpoint, *args])
 
 
 class ResourceListMixin:
