@@ -20,7 +20,7 @@ interactions:
     uri: https://library.thegdl.org/iii/sierra-api/v5/token
   response:
     body:
-      string: '{"access_token":"dD2SmrmmW01BOd4JMCSfktf0DIBZF9Z1SYqn0ke5kVKLzOM30RTKnjbLQjfSM4CkEWgXMz4fcLqrx9VGOzk_3RY-iYAYRwHmW9OeXWb2-cNsCTCCCpM9sbyDuLg41EFvLcNeDVfP1BKjei8Eu89GIM3jp3qMQY6oBqh_uikowcw6IQkY2cqgWwZbF6qIXjwKy2o9wQsEb4NRYt7461FK6w","token_type":"bearer","expires_in":3600}'
+      string: '{"access_token":"NxcealAwe7hxUi9ZvO04h-IzFCDSReBwcWnTiv2BRsqpSwWLSGC9-H0SmwDd_n28kvnl7gNwvxlEULgCr0y6_wBIm7T3IdDjkE0tbxv_BV6a4oSfN9ZhHyGcldKeofCru2-Q9isgUpMj8ow3Awj9LlFw3pKS0L7YLqIdMO7--cd4UcQe8ZHDkFsVABRcp0HdqNx3YQJ1ojQO34VN_XMKEw","token_type":"bearer","expires_in":3600}'
     headers:
       Connection:
       - Keep-Alive

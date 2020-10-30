@@ -22,9 +22,5 @@ class Session(object):
 
     def _request(self, method, path, **kwargs):
         url = '{}/{}'.format(self._endpoint, path)
-        params = {}
-        if "params" in kwargs:
-            params = kwargs['params']
-
-        resp = self._session.request(method, url, params=params)
+        resp = self._session.request(method, url, **kwargs)
         return resp.json()

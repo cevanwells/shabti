@@ -20,7 +20,7 @@ interactions:
     uri: https://library.thegdl.org/iii/sierra-api/v5/token
   response:
     body:
-      string: '{"access_token":"dD2SmrmmW01BOd4JMCSfktf0DIBZF9Z1SYqn0ke5kVKLzOM30RTKnjbLQjfSM4CkEWgXMz4fcLqrx9VGOzk_3RY-iYAYRwHmW9OeXWb2-cNsCTCCCpM9sbyDuLg41EFvLcNeDVfP1BKjei8Eu89GIM3jp3qMQY6oBqh_uikowcw6IQkY2cqgWwZbF6qIXjwKy2o9wQsEb4NRYt7461FK6w","token_type":"bearer","expires_in":3600}'
+      string: '{"access_token":"UTeBKibWv8Rq8di_36lKkPCTtnyEyLwi_RbP_eJZi42xa67Ivq4X_dEO8FPqFHboPvVvOwCf6Xdd0gMIQpPmk2BUvRXIX_CKym0yZStMdutU8b_M3iRQjgKKBvTMtJ8ozpwd4JJRI2XFGLA2Mat6ZqgWPltA1poOtyM9tGumpOBd0Y_GuVsglz5h5eebu8aIImdghMnAMez9xbmS_u0dPQ","token_type":"bearer","expires_in":3600}'
     headers:
       Connection:
       - Keep-Alive
@@ -33,12 +33,12 @@ interactions:
       Server:
       - Apache
       Set-Cookie:
-      - jcontainerId=.jcontainer-public2; path=/iii/sierra-api
-      - jcontainerId=.jcontainer-public2; path=/sierra/admin
-      - jcontainerId=.jcontainer-public2; path=/sierra/dashboard
-      - jcontainerId=.jcontainer-public2; path=/iii/ws/extlink
-      - jcontainerId=.jcontainer-public2; path=/sierra/shindig
-      - jcontainerId=.jcontainer-public2; path=/sierra/ws/summit
+      - jcontainerId=.jcontainer-public1; path=/iii/sierra-api
+      - jcontainerId=.jcontainer-public1; path=/sierra/admin
+      - jcontainerId=.jcontainer-public1; path=/sierra/dashboard
+      - jcontainerId=.jcontainer-public1; path=/iii/ws/extlink
+      - jcontainerId=.jcontainer-public1; path=/sierra/shindig
+      - jcontainerId=.jcontainer-public1; path=/sierra/ws/summit
       Vary:
       - Accept-Encoding,User-Agent
       content-length:

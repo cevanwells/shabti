@@ -23,3 +23,10 @@ def shabti_config():
         'client_secret': CLIENT_SECRET,
         'endpoint': ENDPOINT
     }
+
+
+@pytest.fixture(scope="session")
+def patron_keys():
+    return ['id', 'expirationDate', 'birthDate', 'patronType',
+            'patronCodes', 'homeLibraryCode', 'message',
+            'blockInfo', 'moneyOwed']
