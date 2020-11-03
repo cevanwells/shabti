@@ -36,3 +36,8 @@ def patron_keys():
     return ['id', 'expirationDate', 'birthDate', 'patronType',
             'patronCodes', 'homeLibraryCode', 'message',
             'blockInfo', 'moneyOwed']
+
+
+@pytest.fixture(scope="session")
+def query_results_string():
+    return '{"total": 3,"start": 0,"entries": [{"link": "https://library.thegdl.org/iii/sierra-api/v5/patrons/1401561"},{"link": "https://library.thegdl.org/iii/sierra-api/v5/patrons/1401559"},{"link": "https://library.thegdl.org/iii/sierra-api/v5/patrons/1401560"}]}'
