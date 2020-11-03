@@ -49,7 +49,7 @@ def test_patron_from_address(api_session):
 
 
 @pytest.mark.vcr()
-def test_python_info(api_session, patron_keys):
+def test_patron_info(api_session, patron_keys):
     patron = Patron(api_session, '1401561')
     res = patron.info()
 
@@ -58,7 +58,7 @@ def test_python_info(api_session, patron_keys):
 
 
 @pytest.mark.vcr()
-def test_python_info_with_fields(api_session):
+def test_patron_info_with_fields(api_session):
     patron = Patron(api_session, '1401561')
     fields = ['names', 'barcodes', 'emails', 'addresses']
     res = patron.info(fields=fields)
