@@ -1,0 +1,40 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - jcontainerId=.jcontainer-public1
+      User-Agent:
+      - shabti/0.1.1
+      authorization:
+      - DUMMY
+    method: GET
+    uri: https://library.thegdl.org/iii/sierra-api/v5/patrons/1401561
+  response:
+    body:
+      string: '{"id":1401561,"expirationDate":"2023-10-09","birthDate":"1963-07-02","patronType":0,"patronCodes":{"pcode1":"o","pcode2":"-","pcode3":45,"pcode4":0},"homeLibraryCode":"mo","message":{"code":"-"},"blockInfo":{"code":"-"},"moneyOwed":0.0}'
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 03 Nov 2020 18:35:12 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding,User-Agent
+      content-length:
+      - '236'
+    status:
+      code: 200
+      message: OK
+version: 1
