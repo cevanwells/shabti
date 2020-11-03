@@ -35,12 +35,11 @@ def test_patron_info(patron_keys):
 
 
 @pytest.mark.vcr()
-def test_patron_info_with_fields():
+def test_patron_info_with_fields(custom_patron_keys):
     patron = Patron(1401561)
-    fields = ['names', 'barcodes', 'emails', 'addresses']
-    res = patron.info(fields=fields)
+    res = patron.info(fields=",".join(custom_patron_keys))
 
     assert isinstance(res, dict)
-    assert set(fields).issubset(res.keys())
+    assert set(custom_patron_keys).issubset(res.keys())
     assert res['id'] == 1401561
     assert res['names'][0] == "McCoy, Hank Philip"
