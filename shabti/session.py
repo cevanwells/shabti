@@ -2,13 +2,16 @@
 from requests.auth import HTTPBasicAuth
 from oauthlib.oauth2 import BackendApplicationClient
 from requests_oauthlib import OAuth2Session
+from os import environ as env
 
 from .version import __version__
 
 
 class Session(object):
     """shabti Connection class"""
-    def __init__(self, client_id, client_secret, endpoint, version="v5"):
+    def __init__(self, client_id=env.get('SHABTI_CLIENT_ID', None), 
+                 client_secret=env.get('SHABTI_CLIENT_SECRET', None),
+                 endpoint=env.get('SHABTI_SIERRA_URL', None), version="v5"):
         self._endpoint = '{}/iii/sierra-api/{}'.format(endpoint, version)
         auth = HTTPBasicAuth(client_id, client_secret)
         client = BackendApplicationClient(client_id=client_id)
