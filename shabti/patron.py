@@ -8,6 +8,12 @@ class Patron(ResourceObject):
     def __init__(self, resource_id, api_session=None):
         super().__init__(resource_id, api_session=api_session)
 
+    def __repr__(self):
+        return '<Patron [{}]>'.format(self._id)
+
+    def __str__(self):
+        return 'p{}'.format(self._id)
+
     @classmethod
     def from_barcode(cls, barcode):
         params = {'varFieldTag': 'b', 'varFieldContent': barcode}
